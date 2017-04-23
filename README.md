@@ -29,7 +29,7 @@ docker run -it -e AUTHORIZED_KEY="ssh-rsa AAAA" -p 2222:22 vkandy/sshd
 ```
 
 ## ssh-tunnel
-Suppose you have `container:8080` running on a host `dockerhost`, to access the container port locally, create a tunnel like so:
+Suppose you have `container:8080` running on a remote host `remotedockerhost`, to access the container port locally, create a tunnel like so:
 
 ```bash
 ssh -i ~/.ssh/private_key -p 2222 user@remotedockerhost -fNL 9090:container:8080

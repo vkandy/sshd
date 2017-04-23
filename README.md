@@ -42,3 +42,6 @@ ssh -i ~/.ssh/private_key -p 2222 user@remotedockerhost -fNL 9090:rethinkdb:8080
 ```
 You can now access RethinkDB admin interface at http://localhost:9090
 
+Kill the tunnel like so: `kill $(lsof -t -i @localhost:9090 -sTCP:listen)`
+
+
